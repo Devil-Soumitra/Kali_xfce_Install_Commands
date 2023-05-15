@@ -42,7 +42,7 @@ curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc|sudo gpg --d
 Install All Required Applications:
 
 ```bash
-sudo apt update && sudo apt install -y net-tools fonts-indic conky-all curl jq moc vlc libu2f-udev gcc g++ python3-pip python2 snapd burpsuite ffmpeg libavdevice59 docker-ce docker-ce-cli containerd.io mugshot bleachbit john metasploit-framework dirbuster nmap nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster protonvpn xsltproc exploitdb hydra gufw transmission dkms virtualbox virtualbox-ext-pack
+sudo apt update && sudo apt install -y net-tools fonts-indic conky-all curl jq moc vlc libu2f-udev gcc g++ python3-pip python2 snapd burpsuite ffmpeg libavdevice59 docker-ce docker-ce-cli containerd.io mugshot bleachbit john metasploit-framework dirbuster nmap nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster protonvpn xsltproc exploitdb hydra gufw transmission wpscan xxd whatweb preload dkms virtualbox virtualbox-ext-pack
 ```
 
 Download Required applications deb files from official sources and install them [Chrome, VS Code, XDM]:
