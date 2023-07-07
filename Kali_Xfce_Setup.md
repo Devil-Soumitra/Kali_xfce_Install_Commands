@@ -16,16 +16,16 @@ sudo reboot
 After start the machine run this command to remove the unwanted programs
 
 ```bash
-sudo apt remove parole*
+sudo apt remove parole* firefox-esr*
 ```
 
 Now add some important Program's Repositories in the sources.list using this commands
 
-Proton VPN:
+<!-- Proton VPN:
 
 ```bash
 cd /home/lucifer/Downloads && wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3_all.deb && sudo dpkg -i protonvpn-stable-release_1.0.3_all.deb && rm protonvpn-stable-release_1.0.3_all.deb
-```
+``` -->
 
 Docker-ce:
 
@@ -42,7 +42,7 @@ curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc|sudo gpg --d
 Install All Required Applications:
 
 ```bash
-sudo apt update && sudo apt install -y net-tools fonts-indic conky-all curl jq moc vlc libu2f-udev gcc g++ python3-pip python2 snapd burpsuite ffmpeg libavdevice59 docker-ce docker-ce-cli containerd.io mugshot bleachbit john metasploit-framework dirbuster nmap nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster protonvpn xsltproc exploitdb hydra gufw transmission wpscan xxd whatweb preload dkms virtualbox virtualbox-ext-pack
+sudo apt update && sudo apt install -y net-tools fonts-indic conky-all curl jq moc vlc libu2f-udev gcc g++ openjdk-17-jdk python3-pip python2 snapd burpsuite ffmpeg libavdevice59 docker-ce docker-ce-cli containerd.io mugshot bleachbit john metasploit-framework dirbuster nmap nikto hashid libimage-exiftool-perl binwalk steghide wordlists gobuster xsltproc exploitdb hydra gufw transmission wpscan xxd whatweb preload ttf-mscorefonts-installer celluloid dkms virtualbox virtualbox-ext-pack
 ```
 
 Download Required applications deb files from official sources and install them [Chrome, VS Code, XDM]:
@@ -51,22 +51,28 @@ Download Required applications deb files from official sources and install them 
 cd /home/lucifer/Downloads && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && wget https://az764295.vo.msecnd.net/stable/b3e4e68a0bc097f0ae7907b217c1119af9e03435/code_1.78.2-1683731010_amd64.deb && wget https://github.com/subhra74/xdm/releases/download/8.0.26/xdman_gtk_8.0.26_amd64.deb && wget https://github.com/RickdeJager/stegseek/releases/download/v0.6/stegseek_0.6-1.deb && sudo dpkg -i *
 ```
 
-Install haiti:
+Download and Install Firefox Stander Version:
+
+```bash
+cd /home/lucifer/Downloads && wget https://download-installer.cdn.mozilla.net/pub/firefox/releases/115.0/linux-x86_64/en-US/firefox-115.0.tar.bz2 && tar xjf firefox-*.tar.bz2 && sudo mv firefox /opt && sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox && sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
+```
+
+<!-- Install haiti:
 
 ```bash
 sudo gem install haiti-hash
-```
+``` -->
 
 Start All Importaint Services:
 
 ```bash
-sudo systemctl start bluetooth.service && sudo systemctl start snapd.aa-prompt-listener.service && sudo systemctl start snapd.apparmor.service && sudo systemctl start snapd.recovery-chooser-trigger.service && sudo systemctl start snapd.seeded.service && sudo systemctl start snapd.service && sudo systemctl start snapd.socket
+sudo systemctl start bluetooth.service && sudo systemctl start snapd.aa-prompt-listener.service && sudo systemctl start snapd.apparmor.service && sudo systemctl start snapd.recovery-chooser-trigger.service && sudo systemctl start snapd.seeded.service && sudo systemctl start snapd.service && sudo systemctl start snapd.socket && sudo systemctl start snapd.apparmor
 ```
 
 Enable All Importaint Services:
 
 ```bash
-sudo systemctl enable bluetooth.service && sudo systemctl enable snapd.aa-prompt-listener.service && sudo systemctl enable snapd.apparmor.service && sudo systemctl enable snapd.recovery-chooser-trigger.service && sudo systemctl enable snapd.seeded.service && sudo systemctl enable snapd.service && sudo systemctl enable snapd.socket
+sudo systemctl enable bluetooth.service && sudo systemctl enable snapd.aa-prompt-listener.service && sudo systemctl enable snapd.apparmor.service && sudo systemctl enable snapd.recovery-chooser-trigger.service && sudo systemctl enable snapd.seeded.service && sudo systemctl enable snapd.service && sudo systemctl enable snapd.socket && sudo systemctl enable snapd.apparmor
 ```
 
 Install Setup Spotify:
@@ -147,6 +153,12 @@ sudo nano /etc/fstab
 ```
 
 Write the <i>noatime,</i> before <i>errors=remount-ro</i>
+
+Download and Install Android Stdio:
+
+```bash
+cd /home/lucifer/Downloads && wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.2.1.20/android-studio-2022.2.1.20-linux.tar.gz && tar -xf android-studio-2022.2.1.20-linux.tar.gz && rm android-studio-2022.2.1.20-linux.tar.gz && mv android-studio/ /home/lucifer/opt && cd /home/lucifer/opt/android-studio/bin && ./studio.sh
+```
 
 Install all the Browser Extentions & theme:
 
